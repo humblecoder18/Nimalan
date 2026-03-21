@@ -9,7 +9,7 @@ const projects = [
       "Intelligent automation system that integrates APIs and AI services to streamline workflows, automate chatbot responses, and handle data processing pipelines efficiently.",
     stack: ["Python", "n8n", "OpenAI", "Gmail API"],
     image: new URL("../assets/AI Automation Workflow using n8n.png", import.meta.url).href,
-    github: "https://github.com/nimalanraja",
+    github: null,
     demo: null,
     longDesc: `This project focuses on building end-to-end automation workflows using n8n as the orchestration platform. It integrates multiple APIs and AI services to automate repetitive tasks such as chatbot responses and data processing.
 
@@ -40,7 +40,7 @@ The system performs data preprocessing and feature engineering to enhance model 
     description:
       "Machine learning model that predicts race outcomes using historical race data, driver performance metrics, and team statistics.",
     stack: ["Python", "pandas", "Scikit-learn", "Machine Learning"],
-    image: new URL("../assets/f1.png ", import.meta.url).href,
+    image: new URL("..//assets//f1.png ", import.meta.url).href,
     github: "https://github.com/humblecoder18/f1-Session_2026",
     demo: null,
     longDesc: `This project focuses on predicting Formula 1 race results using historical datasets. It involves extensive feature engineering using driver statistics, lap times, and team performance metrics.
