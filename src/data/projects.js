@@ -40,7 +40,7 @@ The system performs data preprocessing and feature engineering to enhance model 
     description:
       "Machine learning model that predicts race outcomes using historical race data, driver performance metrics, and team statistics.",
     stack: ["Python", "pandas", "Scikit-learn", "Machine Learning"],
-    image: new URL("C:\\Users\\nimal\\OneDrive\\Desktop\\Portfolio\\src\\assets\\f1.png ", import.meta.url).href,
+    image: new URL("../assets/f1.png ", import.meta.url).href,
     github: "https://github.com/humblecoder18/f1-Session_2026",
     demo: null,
     longDesc: `This project focuses on predicting Formula 1 race results using historical datasets. It involves extensive feature engineering using driver statistics, lap times, and team performance metrics.
