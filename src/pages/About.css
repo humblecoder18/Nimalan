@@ -1,0 +1,65 @@
+.about-page { padding: 80px 0 120px; }
+.about-page__title { font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 16px; }
+.about-page__intro { font-size: 1.15rem; color: var(--text2); max-width: 600px; margin-bottom: 80px; line-height: 1.7; }
+
+.about-grid { display: grid; grid-template-columns: 360px 1fr; gap: 64px; margin-bottom: 100px; align-items: start; }
+
+/* Image */
+.about-image-col { position: sticky; top: calc(var(--nav-h) + 24px); }
+.about-image-frame { width: 100%; aspect-ratio: 3/4; border-radius: var(--radius2); overflow: hidden; border: 1px solid var(--border); background: var(--surface); margin-bottom: 20px; }
+.about-image-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.about-image-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 6rem; font-weight: 800; color: var(--text3); }
+
+.about-name-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.about-name-card__name { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; margin-bottom: 4px; }
+.about-name-card__role { font-size: 0.85rem; color: var(--text2); margin-bottom: 20px; }
+.about-name-card__btn { width: 100%; justify-content: center; }
+
+/* Text */
+.about-text-col__heading { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 8px 0 32px; line-height: 1.15; }
+
+.about-body { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+.about-body p { font-size: 0.97rem; color: var(--text2); line-height: 1.8; }
+.about-body strong { color: var(--text); font-weight: 600; }
+
+.about-skills-label { color: var(--text3); margin-bottom: 14px; display: block; }
+.about-skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Timeline */
+.about-timeline { margin-bottom: 100px; }
+.about-timeline__title { font-size: clamp(2rem, 4vw, 3rem); margin: 8px 0 48px; }
+
+.timeline-track { position: relative; padding-left: 32px; }
+.timeline-track::before { content: ''; position: absolute; left: 8px; top: 12px; bottom: 12px; width: 1px; background: linear-gradient(180deg, var(--accent) 0%, var(--border) 100%); }
+
+.tl-item { position: relative; display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding-bottom: 40px; align-items: start; }
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-item__dot { position: absolute; left: -28px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--border2); border: 2px solid var(--bg); transition: background var(--transition); }
+.tl-item--now .tl-item__dot { background: var(--accent); box-shadow: 0 0 12px rgba(232,255,71,0.5); }
+.tl-item--lead .tl-item__dot { background: #60a5fa; }
+.tl-item--award .tl-item__dot { background: #f59e0b; }
+.tl-item--proj .tl-item__dot { background: #a78bfa; }
+.tl-item--cert .tl-item__dot { background: #34d399; }
+.tl-item--edu .tl-item__dot { background: var(--text2); }
+
+.tl-item__year { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3); padding-top: 2px; white-space: nowrap; }
+.tl-item__title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+.tl-item__sub { font-size: 0.85rem; color: var(--text2); }
+
+/* Contact */
+.about-contact { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius2); padding: 56px; }
+.about-contact__title { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 12px; }
+.about-contact > p { font-size: 0.95rem; color: var(--text2); margin-bottom: 32px; }
+.about-contact__info { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.about-contact__row { display: flex; align-items: center; gap: 20px; }
+.about-contact__label { color: var(--text3); min-width: 80px; }
+.about-contact__val { font-size: 0.95rem; color: var(--text); }
+.about-contact__val[href]:hover { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image-col { position: static; }
+  .about-image-frame { max-width: 320px; margin: 0 auto 20px; }
+  .about-contact { padding: 36px 24px; }
+}

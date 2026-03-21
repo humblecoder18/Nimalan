@@ -1,0 +1,226 @@
+.ec-page { padding: 48px 0 120px; }
+
+.ec-header { margin-bottom: 72px; }
+.ec-header__title { font-size: clamp(2.5rem, 5vw, 4.5rem); margin: 8px 0 20px; }
+.ec-header__sub { font-size: 1rem; color: var(--text2); max-width: 580px; line-height: 1.75; }
+
+.ec-section { margin-bottom: 96px; }
+.ec-section__title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin: 8px 0 40px; }
+
+/* Role cards */
+.ec-roles { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
+
+.ec-role-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+.ec-role-card:hover { border-color: var(--border2); }
+
+/* ── SLIDER ── */
+.ec-slider {
+  position: relative;
+  width: 380px;
+  min-height: 320px;
+  background: var(--surface);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ec-slider__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+.ec-slider__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.ec-slider__slide--active {
+  opacity: 1;
+}
+.ec-slider__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.ec-slider__placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--bg3), var(--surface));
+}
+
+/* Arrows */
+.ec-slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  opacity: 0;
+}
+.ec-slider:hover .ec-slider__arrow { opacity: 1; }
+.ec-slider__arrow:hover {
+  background: rgba(232,255,71,0.15);
+  border-color: rgba(232,255,71,0.4);
+}
+.ec-slider__arrow--left  { left: 10px; }
+.ec-slider__arrow--right { right: 10px; }
+
+/* Dots */
+.ec-slider__dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+.ec-slider__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0;
+}
+.ec-slider__dot--active {
+  background: var(--accent);
+  width: 18px;
+  border-radius: 3px;
+}
+
+/* Role card body */
+.ec-role-card__body { padding: 40px 40px 40px 0; }
+.ec-role-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.ec-role-card__period { font-size: 0.72rem; }
+.ec-role-card__org {
+  font-size: 0.82rem;
+  color: var(--text2);
+  background: var(--surface);
+  padding: 3px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+.ec-role-card__title { font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 16px; }
+.ec-role-card__desc { font-size: 0.95rem; color: var(--text2); line-height: 1.7; margin-bottom: 24px; }
+
+.ec-role-card__highlights { display: flex; flex-direction: column; gap: 10px; }
+.ec-role-card__highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.6;
+}
+.ec-check { color: var(--accent); flex-shrink: 0; font-size: 0.8rem; margin-top: 2px; }
+
+/* Events grid */
+.ec-events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ec-event-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all var(--transition);
+}
+.ec-event-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+
+.ec-event-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.ec-event-card__icon { font-size: 1.6rem; }
+.ec-event-card__year { font-size: 0.7rem; }
+.ec-event-card__type { font-size: 0.7rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+.ec-event-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.ec-event-card__desc { font-size: 0.83rem; color: var(--text2); line-height: 1.6; flex: 1; }
+
+/* Awards */
+.ec-awards-grid { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: var(--radius2); overflow: hidden; }
+
+.ec-award-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  transition: background var(--transition);
+}
+.ec-award-card:last-child { border-bottom: none; }
+.ec-award-card:hover { background: var(--surface); }
+
+.ec-award-card__icon { font-size: 1.6rem; flex-shrink: 0; width: 48px; text-align: center; }
+.ec-award-card__title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
+.ec-award-card__sub { font-size: 0.82rem; color: var(--text2); margin-top: 3px; }
+.ec-award-card__year { margin-left: auto; font-size: 0.7rem; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .ec-role-card { grid-template-columns: 1fr; }
+  .ec-slider { width: 100%; min-height: 240px; }
+  .ec-slider__track { min-height: 240px; }
+  .ec-slider__placeholder { min-height: 240px; }
+  .ec-role-card__body { padding: 28px; }
+  .ec-events-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .ec-slider { min-height: 200px; }
+  .ec-slider__track { min-height: 200px; }
+  .ec-events-grid { grid-template-columns: 1fr; }
+  .ec-award-card { flex-wrap: wrap; }
+  .ec-award-card__year { margin-left: 0; }
+}
