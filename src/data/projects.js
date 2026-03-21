@@ -24,7 +24,7 @@ The system operates in an event-driven architecture, enabling seamless execution
     description:
       "Predictive maintenance system that analyzes aircraft sensor data to detect anomalies and forecast potential failures using machine learning.",
     stack: ["Python", "Scikit-learn", "Machine Learning"],
-    image: new URL("C:\\Users\\nimal\\OneDrive\\Desktop\\Portfolio\\src\\assets\\aircrat.jpeg", import.meta.url).href,
+    image: new URL("../assets/aircrat.jpeg", import.meta.url).href,
     github: "https://github.com/humblecoder18/Aircraft-Maintenance-Prediction-System",
     demo: null,
     longDesc: `This project leverages machine learning techniques to predict aircraft maintenance requirements by analyzing 21 different sensor parameters.
@@ -72,7 +72,7 @@ The system integrates speech recognition to enable hands-free interaction and su
     description:
       "Predictive model for estimating Air Quality Index (AQI) across major cities using historical pollution data.",
     stack: ["Python", "Pandas", "nScikit-learn", "Matplotlib", "Machine Learning"],
-    image: new URL("C:\\Users\\nimal\\OneDrive\\Desktop\\Portfolio\\src\\assets\\AQI.jpeg", import.meta.url).href,
+    image: new URL("../assets/AQI.jpeg", import.meta.url).href,
     github: "https://github.com/humblecoder18/Urban-Air-Quality-Prediction-using-Machine-Learning",
     demo: null,
     longDesc: `This project develops machine learning models to predict AQI levels using historical environmental data from multiple cities.
