@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./Extracurricular.css";
 
 // ── ADD YOUR IMAGES HERE ──
-import img1 from "C:\\Users\\nimal\\OneDrive\\Desktop\\Portfolio\\src\\assets\\techvauyan.jpeg";
+import img1 from "../assets/techvauyan.jpeg";
 import img2 from "../assets/Nimalan1.jpeg";
 import img3 from "../assets/n2.jpeg";
 
