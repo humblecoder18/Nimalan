@@ -1,5 +1,19 @@
 const projects = [
   {
+    id: "Aviation-Emergency-Guidance-and-Intelligent-Support",
+    title: "Aviation Emergency Guidance and Intelligent Support",
+    category: "Machine Learning",
+    year: "2026",
+    tech: "Automation",
+    description:
+      "An AI-powered pilot decision support system that predicts bird strike severity and delivers real-time emergency guidance grounded in 30 years of FAA pilot experience.",
+    stack: ["Python 3.10", "RAG", "ML Models"],
+    image: new URL("../assets/aircrat.jpeg", import.meta.url).href,
+    github: null,
+    demo: null,
+    longDesc: `AEGIS is a real-time AI system that helps pilots make emergency decisions immediately after a bird strike. It combines a Gradient Boosting ML classifier trained on 19,302 FAA bird strike records with a RAG pipeline over 16,516 real pilot narratives — predicting the severity of the strike and instantly generating step-by-step emergency measures, species-specific warnings, and a verbatim ATC communication script, all within one second, fully offline`,
+  },
+  {
     id: "AI-Automation-Workflow-using-n8n",
     title: "AI Automation Workflow using n8n",
     category: "Automation",
