@@ -1,5 +1,19 @@
 const projects = [
   {
+  id: "Enterprise-AI-Data-Analyst-Studio",
+  title: "Enterprise AI Data Analyst Studio",
+  category: "Data Analytics & AI",
+  year: "2026",
+  tech: "AI Analytics",
+  description:
+    "An AI-powered data analytics platform that automates data profiling, EDA, business insights, machine learning recommendations, AutoML, prediction, and model explainability.",
+  stack: ["Python", "Streamlit", "Machine Learning", "AutoML", "AI"],
+  image: new URL("../assets/enterprise-ai.jpeg", import.meta.url).href,
+  github: "https://github.com/humblecoder18/Enterprise-AI-Data-Analyst-Studio",
+  demo: null,
+  longDesc: `Enterprise AI Data Analyst Studio is an end-to-end AI-powered analytics platform that transforms raw CSV and Excel datasets into actionable analytical and machine learning insights. It performs automated data cleaning, dataset profiling, exploratory data analysis, interactive visualization, AI-generated business insights, machine learning recommendations, AutoML model training and selection, prediction, feature importance analysis, and prediction explainability. The platform brings the complete data analytics and machine learning workflow into a single Streamlit application, allowing users to move from raw data to predictions and business-ready reports without manually performing each stage.`,
+},
+  {
     id: "Aviation-Emergency-Guidance-and-Intelligent-Support",
     title: "Aviation Emergency Guidance and Intelligent Support",
     category: "Machine Learning",
